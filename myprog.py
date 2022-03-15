@@ -11,7 +11,7 @@ print(hello('world'))
 
 
 def mysum(*args: float) -> float:
-    total = 0
+    total: float = 0
 
     for one_arg in args:
         total += one_arg
