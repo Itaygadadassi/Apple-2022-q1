@@ -10,7 +10,7 @@ print(hello('world'))
 # print(hello(hello))
 
 
-def mysum(*args):
+def mysum(*args: int) -> int:
     total = 0
 
     for one_arg in args:
