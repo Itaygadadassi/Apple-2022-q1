@@ -20,5 +20,5 @@ def mysum(*args: float) -> float:
 
 
 print(mysum(10, 20, 30))
-print(mysum(10, 'a', 30))
+# print(mysum(10, 'a', 30))
 print(mysum(10, 20.5, 30))
