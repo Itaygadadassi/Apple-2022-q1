@@ -11,5 +11,7 @@ def hello(n):
 
 
 for i in range(10):
-    t = threading.Thread(target=hello)  # when started, run the function in t
-    t.start()                           # start the thread
+    # when started, run the function in t
+    t = threading.Thread(target=hello, args=(i,))
+
+    t.start()                                      # start the thread
