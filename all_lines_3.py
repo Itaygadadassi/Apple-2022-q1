@@ -21,12 +21,13 @@ with ThreadPoolExecutor as executor:
         all_futures.append(one_future)
 
     done, not_done = wait(all_futures)
-    end_time = time.time()
 
-print(f'Total time = {end_time - start_time}')
 
 while not q.empty():
     print(q.get())
+
+end_time = time.time()
+print(f'Total time = {end_time - start_time}')
 
 
 # threading: Total time = 0.0012621879577636719
