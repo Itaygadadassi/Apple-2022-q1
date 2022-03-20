@@ -6,12 +6,12 @@ import random
 import queue
 
 
-q = queue.Queue()
+q = queue.Queue()               # thread-safe data structure
 
 
 def hello(n):
     time.sleep(random.randint(0, 3))
-    output.append(f'{n} Hello!')
+    q.put(f'{n} Hello!')
 
 
 all_threads = []
