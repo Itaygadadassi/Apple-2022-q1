@@ -9,7 +9,7 @@ output = []
 
 
 def hello(n):
-    time.sleep(random.randint(0, 0))
+    time.sleep(random.randint(0, 3))
     output.append(f'{n} Hello!')
 
 
