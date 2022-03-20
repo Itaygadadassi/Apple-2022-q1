@@ -11,7 +11,7 @@ def hello(n):
 
 
 with ThreadPoolExecutor(max_workers=20) as executor:
-    all_futures = executor.map(hello, range(10))
+    all_results = executor.map(hello, range(10))
 
-    for one_future in all_futures:
-        print(one_future.results())
+    for one_result in all_results:
+        print(one_result)
