@@ -15,3 +15,6 @@ for i in range(10):
     t = threading.Thread(target=hello, args=(i,))
 
     t.start()                                      # start the thread
+
+
+print('Done!')
