@@ -6,28 +6,28 @@ import random
 import queue
 
 
-q = multiprocessing.Queue()
-
-
 def hello(n, q):
     time.sleep(random.randint(0, 3))
     q.put(f'{n} Hello!')
 
 
-all_processes = []
-for i in range(10):
-    p = multiprocessing.Process(
-        target=hello, args=(i, q))
-    all_processes.append(p)
-    p.start()
+if __name__ == '__main__':
 
-# when we get to this line, all threads should be done
+    q = multiprocessing.Queue()
 
-for one_process in all_processes:
-    one_process.join()           # wait for the thread to finish
+    all_processes = []
+    for i in range(10):
+        p = multiprocessing.Process(
+            target=hello, args=(i, q))
+        all_processes.append(p)
+        p.start()
 
+    # when we get to this line, all threads should be done
 
-print('Done!')
+    for one_process in all_processes:
+        one_process.join()           # wait for the thread to finish
 
-while not q.empty():
-    print(q.get())
+    print('Done!')
+
+    while not q.empty():
+        print(q.get())
