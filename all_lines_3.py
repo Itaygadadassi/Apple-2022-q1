@@ -15,28 +15,18 @@ def all_lines(one_filename):
 
 with ThreadPoolExecutor as executor:
     all_futures = []
+    start_time = time.time()
     for one_filename in glob.glob('*.py'):
         one_future = executor.submit(all_lines, one_filename)
         all_futures.append(one_future)
 
     done, not_done = wait(all_futures)
+    end_time = time.time()
 
-
-start_time = time.time()
-all_threads = []
-for one_filename in glob.glob('*.py'):
-    t = threading.Thread(target=all_lines, args=(one_filename,))
-    all_threads.append(t)
-    t.start()
-
-for one_thread in all_threads:
-    one_thread.join()
-end_time = time.time()
+print(f'Total time = {end_time - start_time}')
 
 while not q.empty():
     print(q.get())
-
-print(f'Total time = {end_time - start_time}')
 
 
 # threading: Total time = 0.0012621879577636719
