@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
-import threading
-import queue
+from concurrent.futures import ThreadPoolExecutor
 import glob
 import time
 
