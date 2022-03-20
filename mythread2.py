@@ -29,5 +29,5 @@ for one_thread in all_threads:
 
 print('Done!')
 
-for one_item in output:
-    print(one_item)
+while not q.empty():
+    print(q.get())
