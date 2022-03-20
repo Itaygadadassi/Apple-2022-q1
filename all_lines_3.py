@@ -5,9 +5,6 @@ import glob
 import time
 
 
-q = queue.Queue()
-
-
 def all_lines(one_filename):
     for one_line in open(one_filename):
         q.put(one_line)
