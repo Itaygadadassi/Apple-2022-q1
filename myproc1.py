@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 
-import threading
+import multiprocessing
 import time
 import random
 import queue
 
 
-q = queue.Queue()               # thread-safe data structure
+q = multiprocessing.Queue()
 
 
 def hello(n):
