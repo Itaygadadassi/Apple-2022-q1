@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 
 import threading
+import time
+import random
 
 
 def hello():
+    time.sleep(random.randint(0, 3))
     print('Hello!')
 
 
