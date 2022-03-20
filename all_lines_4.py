@@ -12,17 +12,7 @@ def all_lines(one_filename):
 
 
 with ThreadPoolExecutor() as executor:
-    all_futures = []
-    start_time = time.time()
-    for one_filename in glob.glob('*.py'):
-        one_future = executor.submit(all_lines, one_filename)
-        all_futures.append(one_future)
-
-    done, not_done = wait(all_futures)
-
-
-while not q.empty():
-    print(q.get())
+    results = executor.map(all_lines, glob.glob('*.py'))
 
 end_time = time.time()
 print(f'Total time = {end_time - start_time}')
