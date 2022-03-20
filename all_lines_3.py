@@ -1,8 +1,20 @@
 #!/usr/bin/env python3
 
 from concurrent.futures import ThreadPoolExecutor
+import queue
 import glob
 import time
+
+q = queue.Queue()
+
+
+def all_lines(one_filename):
+    for one_line in open(filename):
+        q.put(one_line)
+
+
+with ThreadPoolExecutor as executor:
+    for one_filename in glob.glob('*.py'):
 
 
 def all_lines(one_filename):
