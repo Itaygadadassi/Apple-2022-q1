@@ -11,10 +11,10 @@ def all_lines(one_filename):
 
 
 with ThreadPoolExecutor() as executor:
+    start_time = time.time()
     results = executor.map(all_lines, glob.glob('*.py'))
+    end_time = time.time()
 
-
-end_time = time.time()
 print(f'Total time = {end_time - start_time}')
 
 
