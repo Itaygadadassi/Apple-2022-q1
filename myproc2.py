@@ -10,8 +10,10 @@ def hello(n):
     return f'{n} Hello!'
 
 
-with ProcessPoolExecutor(max_workers=20) as executor:
-    all_results = executor.map(hello, range(10))
+if __name__ == '__main__':
 
-    for one_result in all_results:
-        print(one_result)
+    with ProcessPoolExecutor(max_workers=20) as executor:
+        all_results = executor.map(hello, range(10))
+
+        for one_result in all_results:
+            print(one_result)
