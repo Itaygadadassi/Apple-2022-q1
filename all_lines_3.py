@@ -29,7 +29,6 @@ while not q.empty():
 end_time = time.time()
 print(f'Total time = {end_time - start_time}')
 
-
 # threading: Total time = 0.0012621879577636719
 # serial:  = Total time = 0.0006771087646484375
-9
+# executor:  Total time = 0.0006551742553710938
