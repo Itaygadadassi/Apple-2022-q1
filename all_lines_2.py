@@ -1,7 +1,16 @@
 #!/usr/bin/env python3
 
+import threading
+import queue
 import glob
 import time
+
+
+q = queue.Queue()
+
+
+def all_lines(one_filename):
+    for one_line in open(one_filename):
 
 
 def all_lines(*filenames):
