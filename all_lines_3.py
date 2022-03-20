@@ -13,7 +13,7 @@ def all_lines(one_filename):
         q.put(one_line)
 
 
-with ThreadPoolExecutor() as executor:
+with ThreadPoolExecutor(max_workers=20) as executor:
     all_futures = []
     start_time = time.time()
     for one_filename in glob.glob('*.py'):
