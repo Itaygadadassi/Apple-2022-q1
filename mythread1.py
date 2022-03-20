@@ -12,9 +12,7 @@ def hello(n):
 
 all_threads = []
 for i in range(10):
-    # when started, run the function in t
-    t = threading.Thread(target=hello, args=(i,))
-
+    t = threading.Thread(target=hello, args=(i,))  # run the function in t
     all_threads.append(t)
     t.start()                                      # start the thread
 
