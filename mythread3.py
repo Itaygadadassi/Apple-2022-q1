@@ -10,7 +10,7 @@ def hello(n):
     return f'{n} Hello!'
 
 
-with ThreadPoolExecutor() as executor:
+with ThreadPoolExecutor(max_workers=5) as executor:
     all_futures = []
     for i in range(10):
         f = executor.submit(hello, i)
