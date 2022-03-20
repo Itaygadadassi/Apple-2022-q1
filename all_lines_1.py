@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import glob
+import time
 
 
 def all_lines(*filenames):
@@ -9,4 +10,8 @@ def all_lines(*filenames):
             print(one_line)
 
 
+start_time = time.time()
 all_lines(*glob.glob('*.py'))
+end_time = time.time()
+
+print(f'Total time = {end_time - start_time}')
