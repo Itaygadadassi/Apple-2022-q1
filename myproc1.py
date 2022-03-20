@@ -14,17 +14,17 @@ def hello(n):
     q.put(f'{n} Hello!')
 
 
-all_threads = []
+all_processes = []
 for i in range(10):
-    t = threading.Thread(target=hello, args=(i,))  # run the function in t
-    # add the thread to all_threads
-    all_threads.append(t)
-    t.start()                                      # start the thread
+    p = multiprocessing.Process(
+        target=hello, args=(i,))  # run the function in t
+    all_processes.append(p)
+    p.start()                                      # start the thread
 
 # when we get to this line, all threads should be done
 
-for one_thread in all_threads:
-    one_thread.join()           # wait for the thread to finish
+for one_process in all_processes:
+    one_process.join()           # wait for the thread to finish
 
 
 print('Done!')
