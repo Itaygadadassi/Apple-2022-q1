@@ -1,4 +1,4 @@
-#!/usr/bin/env import
+#!/usr/bin/env python3
 
 from concurrent.futures import ThreadPoolExecutor
 import time
