@@ -25,4 +25,7 @@ for one_thread in all_threads:
     one_thread.join()
 end_time = time.time()
 
+while not q.empty():
+    print(q.get())
+
 print(f'Total time = {end_time - start_time}')
