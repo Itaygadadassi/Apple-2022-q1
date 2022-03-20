@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import ThreadPoolExecutor, wait
 import queue
 import glob
 import time
@@ -14,13 +14,12 @@ def all_lines(one_filename):
 
 
 with ThreadPoolExecutor as executor:
+    all_futures = []
     for one_filename in glob.glob('*.py'):
-        executor.submit(all_lines, one_filename)
+        one_future = executor.submit(all_lines, one_filename)
+        all_futures.append(one_future)
 
-
-def all_lines(one_filename):
-    for one_line in open(one_filename):
-        q.put(one_line)
+    done, not_done = wait(all_futures)
 
 
 start_time = time.time()
