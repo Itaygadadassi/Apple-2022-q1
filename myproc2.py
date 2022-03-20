@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from concurrent.futures import ThreadPoolExecutor, wait
+from concurrent.futures import ProcessPoolExecutor, wait
 import time
 import random
 
@@ -10,7 +10,7 @@ def hello(n):
     return f'{n} Hello!'
 
 
-with ThreadPoolExecutor(max_workers=20) as executor:
+with ProcessPoolExecutor(max_workers=20) as executor:
     all_results = executor.map(hello, range(10))
 
     for one_result in all_results:
