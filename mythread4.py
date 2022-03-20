@@ -11,12 +11,6 @@ def hello(n):
 
 
 with ThreadPoolExecutor(max_workers=20) as executor:
-    all_futures = []
-    for i in range(10):
-        f = executor.submit(hello, i)
-        all_futures.append(f)
+    results = executor.map(hello, range(10))
 
-    done, not_done = wait(all_futures)
-
-    for one_item in done:
-        print(one_item.result())
+    print(results)
