@@ -17,7 +17,7 @@ def hello(n):
 all_processes = []
 for i in range(10):
     p = multiprocessing.Process(
-        target=hello, args=(i,))  # run the function in t
+        target=hello, args=(i, q))
     all_processes.append(p)
     p.start()                                      # start the thread
 
