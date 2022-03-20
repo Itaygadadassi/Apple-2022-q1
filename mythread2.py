@@ -8,7 +8,6 @@ import random
 def hello(n):
     time.sleep(random.randint(0, 0))
     print(f'{n} Hello!')
-    print(f'{n} Goodbye!')
 
 
 all_threads = []
