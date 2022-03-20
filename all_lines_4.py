@@ -7,6 +7,7 @@ import time
 
 
 def all_lines(one_filename):
+    # don't really use readlines unless you have small files
     return open(one_filename).readlines()
 
 
