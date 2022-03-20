@@ -9,7 +9,7 @@ import queue
 q = multiprocessing.Queue()
 
 
-def hello(n):
+def hello(n, q):
     time.sleep(random.randint(0, 3))
     q.put(f'{n} Hello!')
 
@@ -19,7 +19,7 @@ for i in range(10):
     p = multiprocessing.Process(
         target=hello, args=(i, q))
     all_processes.append(p)
-    p.start()                                      # start the thread
+    p.start()
 
 # when we get to this line, all threads should be done
 
