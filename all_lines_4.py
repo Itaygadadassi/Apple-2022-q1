@@ -22,3 +22,4 @@ print(f'Total time = {end_time - start_time}')
 # threading: Total time = 0.0012621879577636719
 # serial:  = Total time = 0.0006771087646484375
 # executor:  Total time = 0.0044422149658203125
+# map:       Total time = 0.001125335693359375
