@@ -11,7 +11,7 @@ def all_lines(one_filename):
     return open(one_filename).readlines()
 
 
-with ThreadPoolExecutor() as executor:
+with ThreadPoolExecutor(max_workers=30) as executor:
     start_time = time.time()
     results = executor.map(all_lines, glob.glob('*.py'))
     end_time = time.time()
