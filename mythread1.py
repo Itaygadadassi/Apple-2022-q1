@@ -5,9 +5,9 @@ import time
 import random
 
 
-def hello():
+def hello(n):
     time.sleep(random.randint(0, 3))
-    print('Hello!')
+    print(f'{n} Hello!')
 
 
 for i in range(10):
