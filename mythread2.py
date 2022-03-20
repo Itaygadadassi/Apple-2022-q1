@@ -5,9 +5,12 @@ import time
 import random
 
 
+output = []
+
+
 def hello(n):
     time.sleep(random.randint(0, 0))
-    print(f'{n} Hello!')
+    output.append(f'{n} Hello!')
 
 
 all_threads = []
@@ -24,3 +27,6 @@ for one_thread in all_threads:
 
 
 print('Done!')
+
+for one_item in output:
+    print(one_item)
