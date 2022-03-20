@@ -3,9 +3,10 @@
 import threading
 import time
 import random
+import queue
 
 
-output = []
+q = queue.Queue()
 
 
 def hello(n):
