@@ -14,11 +14,10 @@ def all_lines(one_filename):
         q.put(one_line)
 
 
+start_time = time.time()
 for one_filename in glob.glob('*.py'):
     t = threading.Thread(target=all_lines, args=(one_filename,))
-
-
-start_time = time.time()
+    t.start()
 end_time = time.time()
 
 print(f'Total time = {end_time - start_time}')
