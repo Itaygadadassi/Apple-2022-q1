@@ -11,6 +11,8 @@ def comprehension():
             for one_number in numbers]
 
 
-for i in range(5):
-    output = comprehension()
-    print(len(output))
+if __name__ == '__main__':
+
+    for i in range(5):
+        output = comprehension()
+        print(len(output))
