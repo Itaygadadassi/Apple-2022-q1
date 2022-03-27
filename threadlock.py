@@ -3,6 +3,8 @@
 import threading
 import time
 
+l = threading.Lock()
+
 
 def write_to_log(id_number):
     for i in range(10):
