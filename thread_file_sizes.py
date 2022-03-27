@@ -4,6 +4,15 @@ import threading
 import glob
 import os
 
+# from Python 3.8, we can do this:
+
+
+def handle_exception(*args):
+    print(f'Exception: {args}')
+
+
+threading.excepthook = handle_exception()
+
 
 def file_size(filename):
     return filename, os.stat(filename).st_size
