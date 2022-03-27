@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 
+from memory_profiler import profile
+
+
 @profile
 def comprehension():
     numbers = range(10_000_000)
