@@ -15,11 +15,9 @@ async def hello(n):
 # instead of using "await", we'll use "create_task" to add the function
 # to the event loop.
 async def main():
-    tasks = []
-    for i in range(5):
-        tasks.append(asyncio.create_task(hello(i)))
-
-    prin
+    t1tasks.append(asyncio.create_task(hello(1)))
+    tasks.append(asyncio.create_task(hello(2)))
+    tasks.append(asyncio.create_task(hello(3)))
 
 
 asyncio.run(main())   # run our async def function
