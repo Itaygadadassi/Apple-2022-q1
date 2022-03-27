@@ -28,9 +28,5 @@ async def main():
     await t2
     await t3
 
-    await t1
-    await t2
-    await t3
-
 
 asyncio.run(main())   # run our async def function
