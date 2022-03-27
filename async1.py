@@ -12,6 +12,8 @@ async def hello(n):
     print(f'{n} Goodbye!')
 
 
+# here, I use "await" to say: I'm waiting for hello to run
+# but here, things don't run in parallel
 async def main():
     for i in range(5):
         await hello(i)
