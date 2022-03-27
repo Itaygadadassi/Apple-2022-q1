@@ -11,7 +11,6 @@ def write_to_log(id_number):
         for i in range(10):
             with open(f'log.txt', 'a') as f:
                 for j in range(5):
-                    time.sleep(0.1)
                     f.write(f'{i} Log {id_number} line {j}\n')
 
 
