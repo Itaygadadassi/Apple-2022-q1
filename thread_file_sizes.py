@@ -4,5 +4,6 @@ import threading
 import glob
 import os
 
+
 def file_size(filename):
-    return 
+    return os.stat(filename).st_size
