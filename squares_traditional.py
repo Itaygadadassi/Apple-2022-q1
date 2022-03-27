@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+@profile
 def comprehension():
     numbers = range(10_000_000)
 
