@@ -18,8 +18,8 @@
 /etc/bash_completion.d 0
 /etc/ssl 192
 /etc/kern_loader.conf.applesaved 0
-/etc/nanorc 11
 /etc/ttys~previous 1316
+/etc/nanorc 11
 /etc/csh.logout 39
 /etc/aliases.db 16384
 /etc/hosts.lpd 0
@@ -43,8 +43,8 @@
 /etc/printcap 452
 /etc/auto_home 149
 /etc/php.ini.default-previous 71055
-/etc/sudoers~ 1627
 /etc/manpaths.d 128
+/etc/sudoers~ 1627
 /etc/smb.conf.applesaved 1699
 /etc/ppp 64
 /etc/shells 189
@@ -106,16 +106,17 @@
 /etc/ttys.applesaved 2442
 /etc/moduli~previous 242153
 /etc/rc.netboot 5264
-/etc/hosts~orig 213
+Exception: (_thread._ExceptHookArgs(exc_type=<class 'FileNotFoundError'>, exc_value=FileNotFoundError(2, 'No such file or directory'), exc_traceback=<traceback object at 0x105920bc0>, thread=<Thread(Thread-109 (file_size), started 123145601859584)>),)
 /etc/afpovertcp.cfg~orig 515
+/etc/hosts~orig 213
 /etc/fstab 293
 /etc/opt 96
 /etc/nfs.conf~orig 43
 /etc/hostconfig 201
 /etc/smb.conf.old 2975
 /etc/kern_loader.conf~previous 0
-/etc/rtadvd.conf.applesaved 983
 /etc/xinetd.conf.applesaved 238
+/etc/rtadvd.conf.applesaved 983
 /etc/sshd_config.system_default 3362
 /etc/hosts 220
 /etc/efax.rc~previous 1029
@@ -147,8 +148,8 @@
 /etc/man.conf 4627
 /etc/services 677977
 /etc/mail.rc~orig 106
-/etc/uucp 160
 /etc/resolver 64
+/etc/uucp 160
 /etc/passwd 7868
 /etc/zprofile 255
 /etc/afpovertcp.cfg 515

@@ -11,7 +11,7 @@ def handle_exception(*args):
     print(f'Exception: {args}')
 
 
-# threading.excepthook = handle_exception
+threading.excepthook = handle_exception
 
 
 def file_size(filename):
