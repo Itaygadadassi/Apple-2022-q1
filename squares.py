@@ -5,3 +5,8 @@ def comprehension():
 
     return [one_number ** 2
             for one_number in numbers]
+
+
+for i in range(5):
+    output = comprehension()
+    print(len(output))
