@@ -8,3 +8,5 @@ import os
 def file_size(filename):
     return filename, os.stat(filename).st_size
 
+for one_filename in glob.glob('/etc/*'):
+    
