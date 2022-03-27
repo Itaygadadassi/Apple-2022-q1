@@ -16,12 +16,15 @@ async def hello(n):
 # to the event loop.
 async def main():
 
+    # add these three tasks to the event loop
+
     t1 = asyncio.create_task(hello(1))
     t2 = asyncio.create_task(hello(2))
     t3 = asyncio.create_task(hello(3))
 
-    await t1
-    await t2
+    
+    print(await t1)
+    print(await t2)
     await t3
 
     await t1
