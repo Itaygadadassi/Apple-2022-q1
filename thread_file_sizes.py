@@ -19,6 +19,5 @@ def file_size(filename):
 
 
 for one_filename in glob.glob('/etc/*'):
-    print(one_filename)
     t = threading.Thread(target=file_size, args=(one_filename,))
     t.start()
