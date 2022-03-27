@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 
+import threading
+
+
 def write_to_log(id_number):
     for i in range(10):
         with open(f'log.txt', 'a') as f:
