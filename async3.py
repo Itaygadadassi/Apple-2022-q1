@@ -20,13 +20,5 @@ async def main():
     tasks = [asyncio.create_task(hello(n))
              for n in range(5)]
 
-    await t1
-    await t2
-    await t3
-
-    await t1
-    await t2
-    await t3
-
 
 asyncio.run(main())   # run our async def function
