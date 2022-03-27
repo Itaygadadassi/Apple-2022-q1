@@ -9,7 +9,7 @@ import time
 # it'll run until (a) it ends or (b) it says await, in which case it goes to sleep (similar to yield)
 async def hello(n):
     print(f'{n} Hello!')
-    await time.sleep(1)      # await needs an "awaitable"
+    await asyncio.sleep(1)      # await needs an "awaitable"
     print(f'{n} Goodbye!')
 
 
