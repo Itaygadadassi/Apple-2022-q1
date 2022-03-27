@@ -18,9 +18,11 @@ async def hello(n):
 # to the event loop.
 async def main():
 
+    # create a list of tasks, each of which is on the event loop
     tasks = [asyncio.create_task(hello(n))
              for n in range(5)]
 
+    # wait until all tasks are done running on the event loop
     results = await asyncio.gather(*tasks)
     print(results)
 
