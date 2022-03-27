@@ -23,6 +23,7 @@ async def main():
     t2 = asyncio.create_task(hello(2))
     t3 = asyncio.create_task(hello(3))
 
+    # t1 might take a long time -- wait until t1 has (a) await or (b) ends
     await t1
     await t2
     await t3
