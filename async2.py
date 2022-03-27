@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import asyncio
+import time
 
 
 # function that I want to run in the asyncio "event loop"
@@ -8,7 +9,7 @@ import asyncio
 # it'll run until (a) it ends or (b) it says await, in which case it goes to sleep (similar to yield)
 async def hello(n):
     print(f'{n} Hello!')
-    await asyncio.sleep(1)
+    await time.sleep(1)      # await needs an "awaitable"
     print(f'{n} Goodbye!')
 
 
