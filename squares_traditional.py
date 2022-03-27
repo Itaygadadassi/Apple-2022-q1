@@ -4,7 +4,7 @@ from memory_profiler import profile
 
 
 @profile
-def comprehension():
+def traditional():
     numbers = range(10_000_000)
 
     output = []
@@ -16,7 +16,6 @@ def comprehension():
 
 
 if __name__ == '__main__':
-
     for i in range(5):
-        output = comprehension()
+        output = traditional()
         print(len(output))
